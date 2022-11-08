@@ -33,11 +33,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'course:course-list' %}">Cursos</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'course:homework-list' %}">Entregables</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'student:student-list' %}">Estudiantes</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'profesor:profesor-list' %}">Profesores</a></li>
-                        
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'album:album-list' %}">Albums</a></li>
+                                                
                         <div class="topbar-divider d-none d-sm-block"></div>
                        
                         {% if user.is_authenticated %}
@@ -62,7 +59,7 @@
                                 <h4>Bienvenido</h4>
                             {% else %}
                                 <h1>Nuestro Blog</h1>
-                                <span class="subheading">A Blog Theme by Start Bootstrap</span>
+                                <span class="subheading">Por Carlos Daniel Sancho y Adrian Hugo Toledo</span>
                             {% endif %}
                             {% if avatar_url %}
                                 <a href="{% url 'home:avatar-load' %}"><img height="260px" src="{{avatar_url}}"></a>
@@ -104,7 +101,7 @@
                     <h2>Buscador de reseñas de discos</h2>
                     <form action="{% url 'home:search' %}" method="GET">
                         <div>
-                            <input type="text" name="search_param" id="course_code_or_name" placeholder="Buscar.."
+                            <input type="text" name="search_param" id="album_code_or_name" placeholder="Buscar.."
                             {% if search_param %} value="{{ search_param }}" {% endif %}
                             >
                             <input type="submit" value="Buscar">
@@ -115,18 +112,18 @@
                     <hr class="my-4" />
 
                     <!-- Si hay resultados en el buscador los presenta -->
-                    {% if courses %}
-                    {% for course in courses %}
+                    {% if albums %}
+                    {% for album in albums %}
                         <!-- Post preview-->
                         <div class="post-preview">
-                            <a href="{% url 'course:course-detail' course.id %}">
-                                <h2 class="post-title">Este es el curso de {{ course.name }}</h2>
-                                <h3 class="post-subtitle">Que tiene el código: {{ course.code }}</h3>
+                            <a href="{% url 'album:album-detail' album.id %}">
+                                <h2 class="post-title">Este es el cisco {{ album.title }}</h2>
+                                <h3 class="post-subtitle">del interprete: {{ album.performer }}</h3>
                             </a>
                             <p class="post-meta">
-                                Creado por
-                                <span style="color: #0b4956;" href="">{{ course.owner.username }}</span>
-                                ( {{ course.created_at }} )
+                                Subido por
+                                <span style="color: #0b4956;" href="">{{ album.owner.username }}</span>
+                                ( {{ album.created_at }} )
                             </p>
                         </div>
                         <!-- Divider-->
@@ -143,7 +140,7 @@
                                 <span class="step-links">
                                     {% if page_obj.has_previous %}
                                         <a href="?page=1">&laquo; first</a> |
-                                        <a href="?page={{ course_list.previous_page_number }}">previous</a> |
+                                        <a href="?page={{ album_list.previous_page_number }}">previous</a> |
                                     {% endif %}
                         
                                     {% if page_obj.paginator.num_pages > 1 %}
@@ -196,7 +193,7 @@
                                 </a>
                             </li>
                         </ul>
-                        <div class="small text-center text-muted fst-italic">Copyright &copy; Nuestro Blog 2022</div>
+                        <div class="small text-center text-muted fst-italic">Nuestro Blog 2022</div>
                     </div>
                 </div>
             </div>
