@@ -1,5 +1,5 @@
 # Playground Final Project
-Desarrollar en dupla, una aplicación estilo web blog programada con Python en Django que tendrá admin, perfiles, registro, páginas y formulario
+Desarrollar en dupla, una aplicación estilo web blog programada con Python en Django que tendrá admin, perfiles, registro, páginas y formularios
 
 # Instrucciones para ejecutar este proyecto
 
