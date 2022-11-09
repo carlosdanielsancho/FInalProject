@@ -43,7 +43,7 @@ class AlbumForm(forms.ModelForm):
         ),
     )
 
-    genre = forms.IntegerField(
+    genre = forms.CharField(
         label="Género:",
         required=False,
         widget=forms.TextInput(
