@@ -101,7 +101,7 @@
                     <h2>Buscador de reseñas de discos</h2>
                     <form action="{% url 'home:search' %}" method="GET">
                         <div>
-                            <input type="text" name="search_param" id="album_code_or_name" placeholder="Buscar.."
+                            <input type="text" name="search_param" id="album_performer_or_title" placeholder="Buscar disco o artista.."
                             {% if search_param %} value="{{ search_param }}" {% endif %}
                             >
                             <input type="submit" value="Buscar">
