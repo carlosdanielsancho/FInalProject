@@ -43,11 +43,16 @@ class AlbumForm(forms.ModelForm):
         ),
     )
 
-    genre = forms.CharField(
+    genre = forms.IntegerField(
         label="Género:",
-        max_length=15,
         required=False,
-        widget=CKEditorWidget(),
+        widget=forms.TextInput(
+            attrs={
+                "class": "album-genre",
+                "placeholder": "Género",
+                "required": "True",
+            }
+        ),
     )
     
     description = forms.CharField(
