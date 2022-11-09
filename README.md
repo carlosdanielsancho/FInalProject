@@ -154,7 +154,7 @@ git commit -m "mensaje de confirmación"
 Después de haber confirmado tus cambios, el siguiente paso que quieres dar es enviar tus cambios al servidor remoto. Git push envía tus commits al repositorio remoto.
 ```bash
 git push <nombre-remoto> <nombre-de-tu-rama>
-git push origin <nombre-de-tu-rama>
+git push origin develop_nombreapellido
 ```
 ***Importante: Git push solamente carga los cambios que han sido confirmados con un ``git commit``.***
 
