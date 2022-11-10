@@ -36,6 +36,12 @@
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'album:album-list' %}">Albums</a></li>
                                                 
                         <div class="topbar-divider d-none d-sm-block"></div>
+
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'album:album-list' %}">Sobre Nosotros</a></li>
+                                                        
+                        <div class="topbar-divider d-none d-sm-block"></div>
                        
                         {% if user.is_authenticated %}
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'home:user-update' %}">Editar usuario</a></li>
