@@ -1,5 +1,5 @@
 # Playground Final Project
-Desarrollamos en dupla Daniel Sancho y Hugo Adrian Toledo una aplicación estilo web blog programada con Python en Django que tendrá admin, perfiles, registro, páginas y formularios
+Desarrollamos en dupla (Daniel Sancho) y (Hugo Adrian Toledo) una aplicación estilo web blog programada con Python en Django que tendrá admin, perfiles, registro, páginas y formularios
 
 # Instrucciones para ejecutar este proyecto
 
