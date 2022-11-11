@@ -1,5 +1,5 @@
 # Playground Final Project
-Desarrollamos en dupla (Daniel Sancho) y (Hugo Adrian Toledo) una aplicación estilo web blog programada con Python en Django que tendrá admin, perfiles, registro, páginas y formularios
+Desarrollamos en dupla `Daniel Sancho` y `Hugo Adrian Toledo` una aplicación estilo web blog programada con Python en Django que tendrá admin, perfiles, registro, páginas y formularios
 
 # Instrucciones para ejecutar este proyecto
 
@@ -43,7 +43,7 @@ pip install -r requirements.txt
 Se instalarán: 
 Django==4.1.2
 django-ckeditor==6.5.1
-Pillow==9.3.0```
+Pillow==9.3.0
 
 ### 5. Navegamos hacia la carpeta del proyecto `our_blog`
 ```bash
