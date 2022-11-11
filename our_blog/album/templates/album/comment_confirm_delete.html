@@ -29,7 +29,7 @@ Comentario delete
 <form action="" method="POST">
     {% csrf_token %}
     <input class="btn btn-danger" type="submit" value="Si, eliminar.">
-    <a class="btn btn-primary" href="{% url 'course:course-detail' comment.course.id %}" >Cancelar</a>
+    <a class="btn btn-primary" href="{% url 'album:album-detail' comment.album.id %}" >Cancelar</a>
 </form>
 
 {% endblock %}

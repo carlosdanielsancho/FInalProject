@@ -12,7 +12,7 @@ Album detail
             <div class="col-md-15 col-lg-16 col-xl-14">
                 <div class="site-heading">
                     <h1>{{ album.name }}</h1>
-                    <span class="subheading">Detalles del album</span>
+                    <span class="subheading">Detalles del disco</span>
                 </div>
             </div>
         </div>
@@ -25,16 +25,16 @@ Album detail
 {% block our_blog_content %}
 <!-- Post preview-->
 <div class="post-preview">
-    <h2 class="post-subtitle">Album: {{ album.title }}</h2>
-    <h3 class="post-subtitle">Artista: {{ album.performer }}</h3>
-    <h4 class="post-subtitle">Lanzamiento: {{ album.release }}</h4>
+    <h2 class="post-subtitle">{{ album.title }}</h2>
+    <h3 class="post-subtitle">{{ album.performer }}</h3>
+    <h4 class="post-subtitle">Año: {{ album.release }}</h4>
     <h4 class="post-subtitle">Género: {{ album.genre }}</h4>
     <p class="post-meta">
-        Creado por
+        Posteado por
         <span style="color: #0b4956;" href="">{{ album.owner.username }}</span>
         ( {{ album.created_at }} )
         <br>
-        Última fecha de actualización ( {{ album.updated_at }} )
+        Actualizado ( {{ album.updated_at }} )
     </p>
 
     <!-- Image -->
