@@ -16,7 +16,7 @@ Album list
                 </div>
             </div>
         </div>
-        <a class="button_custom" href="{% url 'album:album-add' %}">Crear nuevo Album</a>
+        <a class="button_custom" href="{% url 'album:album-add' %}">Cargar nuevo disco</a>
     </div>
 </header>
 {% endblock %}
@@ -27,8 +27,8 @@ Album list
         <!-- Post preview-->
         <div class="post-preview">
             <a href="{% url 'album:album-detail' album.id %}">
-                <h2 class="post-title">Album: {{ album.title }}</h2>
-                <h3 class="post-subtitle">Interprete: {{ album.performer }}</h3>
+                <h2 class="post-title">{{ album.title }}</h2>
+                <h3 class="post-subtitle">Intérprete: {{ album.performer }}</h3>
                 <h3 class="post-subtitle">Lanzamiento: {{ album.release }}</h3>
                 <h3 class="post-subtitle">Género: {{ album.genre }}</h3>
             </a>
@@ -42,5 +42,3 @@ Album list
         <hr class="my-4" />
     {% endfor %}
 {% endblock %}
-
-
