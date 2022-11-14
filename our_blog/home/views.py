@@ -29,26 +29,22 @@ def index(request):
         template_name="home/index.html",
     )
 
-
+# REVISAR BIEN ESTO
 def search(request):
-    search_param = request.GET["search_param"]
-    print("search: ", search_param)
-    context_dict = dict()
+    search_param = request.GET.get["search_param"]
+    albums=Album.objects.all
+    
     if search_param:
-        query = Q(name__contains=search_param)
-        query.add(Q(code__contains=search_param), Q.OR)
-        albums = Album.objects.filter(query)
-        context_dict.update(
-            {
-                "albums": albums,
-                "search_param": search_param,
-            }
-        )
-    return render(
-        request=request,
-        context=context_dict,
-        template_name="home/index.html",
-    )
+        
+        albums=Album.objects.filter(
+          Q(title__icontains = albums) |
+          Q(performer__icontains = albums) |
+          Q(release__icontains = albums) |
+          Q(genre__icontains = albums) |
+          Q(description__icontains = albums) 
+        ).distinct()
+
+    return render(request, 'index.html', {'resultados':albums})
 
 
 def register(request):
