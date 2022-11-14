@@ -117,8 +117,8 @@
                         <!-- Post preview-->
                         <div class="post-preview">
                             <a href="{% url 'album:album-detail' album.id %}">
-                                <h2 class="post-title">Este es el cisco {{ album.title }}</h2>
-                                <h3 class="post-subtitle">del interprete: {{ album.performer }}</h3>
+                                <h2 class="post-title">{{ album.title }}</h2>
+                                <h3 class="post-subtitle">{{ album.performer }}</h3>
                             </a>
                             <p class="post-meta">
                                 Subido por

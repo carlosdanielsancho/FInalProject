@@ -35,8 +35,8 @@ def search(request):
     print("search: ", search_param)
     context_dict = dict()
     if search_param:
-        query = Q(name__contains=search_param)
-        query.add(Q(code__contains=search_param), Q.OR)
+        query = Q(title__contains=search_param)
+        query.add(Q(performer__contains=search_param), Q.OR)
         albums = Album.objects.filter(query)
         context_dict.update(
             {
