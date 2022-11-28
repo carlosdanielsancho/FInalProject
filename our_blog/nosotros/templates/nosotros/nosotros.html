@@ -1,0 +1,51 @@
+{% extends "home/index.html" %}
+{% load static %}
+
+
+{% block our_blog_title %}
+About
+{% endblock %}
+
+{% block our_blog_header %}
+<header class="masthead" style="background-image: url('/static/home/assets/img/about-bg.jpg')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-15 col-lg-16 col-xl-14">
+                <div class="site-heading">
+                    <h1>Sobre Nosotros</h1>
+                    <span class="subheading">Nuestro Blog</span>
+                </div>
+            </div>
+        </div>
+        <a class="button_custom" href="{% url 'album:album-add' %}">Crear nuevo Album</a>
+    </div>
+    
+</header>
+
+<p align="center" style="color:darkslategray;" >Blog creado por Daniel Sancho y Adrian Toledo; el mismo busca poder ser una referencia para aquellos amantes de música</p>
+
+{% endblock %}
+
+
+{% block our_blog_content %}
+    {% for album in album_list %}
+        <!-- Post preview-->
+        <div class="post-preview">
+            <a href="{% url 'album:album-detail' album.id %}">
+                <h2 class="post-title">Album: {{ album.title }}</h2>
+                <h3 class="post-subtitle">Interprete: {{ album.performer }}</h3>
+                <h3 class="post-subtitle">Lanzamiento: {{ album.release }}</h3>
+                <h3 class="post-subtitle">Género: {{ album.genre }}</h3>
+            </a>
+            <p class="post-meta">
+                Subido por
+                <span style="color: #0b4956;" href="">{{ album.owner.username }}</span>
+                ( {{ album.created_at }} )
+            </p>
+        </div>
+        <!-- Divider-->
+        <hr class="my-4" />
+    {% endfor %}
+{% endblock %}
+
+
