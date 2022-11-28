@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'album',
     'home',
     'ckeditor',
+    'nosotros',
 ]
 
 MIDDLEWARE = [
